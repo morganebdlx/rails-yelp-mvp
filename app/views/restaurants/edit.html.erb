@@ -1,0 +1,12 @@
+<h2>Edit Restaurant</h2>
+
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :category, collection: Restaurant::CATEGORY %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to "Show this restaurant", @restaurant %> |
+<%= link_to "Restaurants list", restaurants_path %>
